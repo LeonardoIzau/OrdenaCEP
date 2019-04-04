@@ -1,4 +1,6 @@
-#include <stdio.h>
+//Código escrito em conjunto por Leonardo Izaú e Mariana Fortes.
+
+#include <stdio.h>                
 #include <stdlib.h>
 #include <string.h>
 
