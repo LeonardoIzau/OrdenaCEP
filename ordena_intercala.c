@@ -50,13 +50,13 @@ void divide(FILE *f)
 	total += oit[0];
 	for(i = 1; i < 8; i++)
 	{
-	    oit[i] = ((qtd - total)/(8-i));
-	    total += oit[i];
+	   	oit[i] = ((qtd - total)/(8-i));
+	    	total += oit[i];
 	}
 	for(j = 0; j < 8; j++)
     	{	
-	    sprintf(nomeArq, "cep_%d.dat", j);
-            le_ordena(f, oit[j], nomeArq);
+	    	sprintf(nomeArq, "cep_%d.dat", j);
+            	le_ordena(f, oit[j], nomeArq);
     	}
 	fclose(f);
 }
@@ -71,24 +71,24 @@ void intercala(FILE *a, FILE *b, FILE *saida)
     {
         if(compara(&ea,&eb)<0)
         {
-            fwrite(&ea,sizeof(Endereco),1,saida);
-            fread(&ea,sizeof(Endereco),1,a);
+            	fwrite(&ea,sizeof(Endereco),1,saida);
+            	fread(&ea,sizeof(Endereco),1,a);
         }
         else
         {
-            fwrite(&eb,sizeof(Endereco),1,saida);
-            fread(&eb,sizeof(Endereco),1,b);
+            	fwrite(&eb,sizeof(Endereco),1,saida);
+            	fread(&eb,sizeof(Endereco),1,b);
         }
     }
     while(!feof(a))
     {
-        fwrite(&ea,sizeof(Endereco),1,saida);
-        fread(&ea,sizeof(Endereco),1,a);
+        	fwrite(&ea,sizeof(Endereco),1,saida);
+        	fread(&ea,sizeof(Endereco),1,a);
     }
     while(!feof(b))
     {
-        fwrite(&eb,sizeof(Endereco),1,saida);
-        fread(&eb,sizeof(Endereco),1,b);
+        	fwrite(&eb,sizeof(Endereco),1,saida);
+       	 	fread(&eb,sizeof(Endereco),1,b);
     }
     printf("Intercalado = OK\n");
     fclose(a);
